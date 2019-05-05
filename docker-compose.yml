@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  cassandra:
+    image: cassandra:3.11.2
+    volumes:
+      - "./cassandra_init.sh:/cassandra_init.sh"
+    command: "sh /cassandra_init.sh"
